@@ -1,0 +1,39 @@
+.herotemp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    .herotemp-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        gap: 40px;
+
+        .temp-text {
+            width: 40%;
+
+            h2 {
+                font-size: 58px;
+            }
+
+            p {
+                margin: 10px 0px;
+                font-size: 18px;
+            }
+
+            .mobile-apps {
+                display: flex;
+                gap: 20px;
+                margin: 20px 0px;
+
+                .image {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
