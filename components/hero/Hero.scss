@@ -1,0 +1,26 @@
+.hero {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+
+        .hero-txt {
+            margin-top: -40px;
+
+            h3 {
+                font-size: 98px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

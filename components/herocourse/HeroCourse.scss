@@ -1,0 +1,74 @@
+.herocourse {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .course-container {
+        display: flex;
+        gap: 40px;
+        width: 90%;
+        margin: 10px;
+
+        .course-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: 0px 7px 8px 6px rgba(0,0,0, 3%);
+
+            .course-image {
+
+                .image {
+                    width: 380px;
+                }
+            }
+
+            .course-details {
+                margin-top: 10px;
+
+                .course-det {
+
+                    p {
+                        color: #cea205;
+
+                        &:nth-child(2) {
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: black;
+                        }
+                    }
+                }
+
+                .course-stats {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                    margin-bottom: 10px;
+
+                    .stats {
+                        display: flex;
+                        gap: 8px;
+
+                        .image {
+                            width: 16px;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .btn {
+
+                        button {
+                            background: rgb(74, 74, 255);
+                            color: white;
+                            padding: 8px 30px;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

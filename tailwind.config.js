@@ -5,11 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // or 'media' if you prefer system-based dark mode
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gradientStart: '#111418',
+        gradientMid: '#302b63',
+        gradientEnd: '#24243e',
       },
     },
   },

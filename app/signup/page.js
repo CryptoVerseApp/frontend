@@ -1,94 +1,27 @@
-'use client';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Image from "next/image";
+import SigninHero from '../assets/login.png'
+import Link from "next/link";
+import '../login/SignIn.scss'
 
-export default function Signup() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        walletAddress: ''
-    });
-    const router = useRouter();
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await fetch('/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            const data = await res.json();
-            if (res.ok) {
-                router.push('/login');
-            } else {
-                console.error(data.error);
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
+export default function SignUp () {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
-                <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">Signup</h1>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label htmlFor="name" className="block text-gray-700">Name</label>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="block text-gray-700">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="password" className="block text-gray-700">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="walletAddress" className="block text-gray-700">Wallet Address</label>
-                        <input
-                            type="text"
-                            name="walletAddress"
-                            placeholder="Wallet Address"
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
-                    >
-                        Sign Up
-                    </button>
+        <div className="signin">
+        <div className="signin-container">
+            <div className="signin-hero">
+                <Image src={SigninHero} />
+            </div>
+            <div className="sign-right">
+                <h2>Sign Up</h2>
+                <p>Create an account with us on our plartform and start Learning</p>
+                <form>
+                    <input type="text" name="basename" placeholder="Base Name" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
+                    <button>Connect</button>
                 </form>
+                <p className="linkin">Already have an account? <Link href='/login'>SignUp</Link></p>
             </div>
         </div>
-    );
+    </div>
+    )
 }
