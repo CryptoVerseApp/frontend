@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href='/'>Wallet</Link>
       </div>
       <div className="navbar-btn">
-        <button>Connect Wallet</button>
+        <Link href='/signup'><button>Connect Wallet</button></Link>
       </div>
       </div>
     </div>

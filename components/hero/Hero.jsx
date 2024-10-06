@@ -12,7 +12,7 @@ const Hero = () => {
                 <p>find educational resources on Web3, blockchain, and crptocurrency.</p>
             </div>
             <div className="hero-image">
-                <Image src={HeroImage} />
+                <Image src={HeroImage} alt='Image here' />
             </div>
         </div>
     </div>

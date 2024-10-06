@@ -8,7 +8,7 @@ export default function SignUp () {
         <div className="signin">
         <div className="signin-container">
             <div className="signin-hero">
-                <Image src={SigninHero} />
+                <Image src={SigninHero} alt="Image here" />
             </div>
             <div className="sign-right">
                 <h2>Sign Up</h2>
