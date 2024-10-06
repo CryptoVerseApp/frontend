@@ -17,7 +17,7 @@ export default function SignIn () {
                         <input type="text" name="basename" placeholder="Base Name" />
                         <button>Connect</button>
                     </form>
-                    <p className="linkin">Don't have an account? <Link href='/signup'>SignUp</Link></p>
+                    <p className="linkin">Don&apos;t have an account? <Link href='/signup'>SignUp</Link></p>
                 </div>
             </div>
         </div>
