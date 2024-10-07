@@ -1,0 +1,157 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .dashboard-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 95%;
+
+        .search-wrapper {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            width: 100%;
+
+            .dash-search {
+                display: flex;
+                background: #d3d2d2;
+                padding: 15px 15px;
+                border-radius: 30px;
+    
+                .search-icon {
+                    width: 40px;
+                    object-fit: contain;
+                }
+    
+                input {
+                    background: #d3d2d2;
+                    color: white;
+                    padding: 0px 35px;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .dash-rec {
+            display: flex;
+            align-items: center;
+            margin: 30px 0px;
+            justify-content: space-between;
+            width: 100%;
+            color: #747474;
+        }
+
+        .dash-courses {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: start;
+            gap: 30px;
+            width: 100%;
+
+            .dash-cors-container {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0px 6px 7px 4px rgba(0,0,0, 20%);
+
+                .dash-image {
+
+                    .image {
+                        width: 300px;
+                    }
+                }
+
+                .dash-details {
+                    text-align: start;
+                    margin: 8px 0px;
+
+                    p {
+                        color: #cea205;
+                    }
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+
+                .dash-mojis {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 50px;
+
+                    .dash-left {
+                        display: flex;
+                        gap: 10px;
+
+                        .moji {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    .right {
+
+                        button {
+                            padding: 6px 15px;
+                            background: #1A2850;
+                            color: white;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dash-previews {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            position: relative;
+
+            .dash-video {
+                position: relative;
+            }
+
+            .preview-title {
+                position: absolute;
+                top: 0;
+                padding: 10px;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+
+                .bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0px 10px;
+
+                    .play {
+                        width: 20px;
+                        background: #747474;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
