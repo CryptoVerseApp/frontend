@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.14",
     "@svgr/webpack": "^8.1.0",
     "bcryptjs": "^2.4.3",
     "ethers": "^6.13.3",
