@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="navbar-left">
       <div className="navlinks">
         <Link href='/' className='text-blue-700'>Home</Link>
-        <Link href='/'>Courses</Link>
+        <Link href='/'>Course</Link>
         <Link href='/'>Library</Link>
         <Link href='/'>Wallet</Link>
       </div>
