@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import './HeroTemp.scss'
-import TempImage from '../../app/assets/hero2.png';
+import TempImage from '../../app/assets/onchain.png';
 import Google from '../../app/assets/google.png';
 import PlayStore from '../../app/assets/playstore.png'
 

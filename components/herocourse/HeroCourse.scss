@@ -10,6 +10,7 @@
         gap: 40px;
         width: 90%;
         margin: 10px;
+        color: white;
 
         .course-wrapper {
             display: flex;
@@ -17,6 +18,7 @@
             padding: 15px;
             border-radius: 30px;
             box-shadow: 0px 7px 8px 6px rgba(0,0,0, 3%);
+            background: #353E74;
 
             .course-image {
 
@@ -31,12 +33,12 @@
                 .course-det {
 
                     p {
-                        color: #cea205;
+                        color: #4c4cfc;
 
                         &:nth-child(2) {
                             font-size: 20px;
                             font-weight: 600;
-                            color: black;
+                            color: white;
                         }
                     }
                 }

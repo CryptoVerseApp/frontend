@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 import './Navbar.scss'
+import Logo from '../app/assets/LogoCryptoVerse.png'
+import Image from 'next/image'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <div className="navbar-name"><h2>CryptoVerse</h2></div>
+      <div className="navbar-name"><Image className='image' src={Logo} alt='Logo' /></div>
       <div className="navbar-left">
       <div className="navlinks">
         <Link href='/' className='text-blue-700'>Home</Link>
