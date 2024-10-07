@@ -7,10 +7,10 @@ import PlayStore from '../../app/assets/playstore.png'
 
 const HeroTemp = () => {
   return (
-    <div className='herotemp'>
+    <div className='herotemp' id='library'>
       <div className="herotemp-container">
         <div className="herotemp-image">
-             <Image src={TempImage} alt='Image here' />
+             <Image src={TempImage} className='image' alt='Image here' />
         </div>
         <div className="temp-text">
             <h2>On Chain Library for blockchain Education</h2>

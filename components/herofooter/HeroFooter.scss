@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .herofooter {
     display: flex;
     flex-direction: column;
@@ -22,10 +24,26 @@
             text-align: start;
             width: 80%;
 
+            @include mobile {
+                flex-direction: column;
+            }
+
             .top-left {
                 margin-top: -200px;
+
+                @include mobile {
+                    margin-top: 0;
+                }
+
                 h2 {
                     font-size: 48px;
+                    font-weight: 600;
+
+                    @include mobile {
+                        font-size: 38px;
+                        margin-bottom: 20px;
+                        font-weight: 600;
+                    }
                 }
             }
 
@@ -39,6 +57,11 @@
                 row-gap: 40px;
                 width: 60%;
 
+                @include mobile {
+                    width: 100%;
+                    justify-content: center;
+                }
+
                 .right-content {
                     display: flex;
                     flex-direction: column;
@@ -46,6 +69,15 @@
                     h2 {
                         font-size: 28px;
                         width: 600px;
+
+                        @include tablet {
+                            width: 500px;
+                        }
+
+                        @include mobile {
+                            width: 100%;
+                            font-size: 18px;
+                        }
                     }
     
                     p {
@@ -56,12 +88,19 @@
 
                 button {
                     background: #4F588B7A;
-                    padding: 8px;
+                    padding: 6px;
                     border-radius: 50%;
 
                     .image {
                         width: 25px;
                         height: 25px;
+                        object-fit: contain;
+
+                        @include mobile {
+                            width: 20px;
+                            height: 20px;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
@@ -81,6 +120,10 @@
             width: 100%;
             padding-top: 300px;
 
+            @include mobile {
+                padding-top: 100px;
+            }
+
             hr {
                 height: 2px;
                 border: none;
@@ -94,6 +137,10 @@
                 justify-content: space-between;
                 width: 80%;
                 margin: 60px 0px;
+
+                @include mobile {
+                    margin: 20px 0px;
+                }
             }
 
             .bottom-social {

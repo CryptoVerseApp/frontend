@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .herofeatures {
     display: flex;
     flex-direction: column;
@@ -24,6 +26,10 @@
         margin: 20px;
         gap: 60px;
 
+        @include mobile {
+            justify-content: center;
+        }
+
         .features-temp {
             display: flex;
             flex-direction: column;
@@ -33,6 +39,10 @@
             width: 380px;
             border-radius: 30px;
             height: 450px;
+
+            @include tablet {
+                width: 340px;
+            }
 
             h2 {
                 font-size: 28px;

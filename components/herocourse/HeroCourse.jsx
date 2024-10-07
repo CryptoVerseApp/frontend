@@ -7,11 +7,11 @@ import Star from '../../app/assets/Star.png'
 
 const HeroCourse = () => {
   return (
-    <div className='herocourse'>
+    <div className='herocourse' id='courses' >
         <div className="course-container">
             <div className="course-wrapper">
             <div className="course-image">
-                <Image className='image' src={HeroCourseImage} />
+                <Image className='image' alt='Image here' src={HeroCourseImage} />
             </div>
             <div className="course-details">
                 <div className="course-det">
@@ -20,9 +20,9 @@ const HeroCourse = () => {
                 </div>
                 <div className="course-stats">
                     <div className="stats">
-                        <Image className='image' src={UserIcon} />
+                        <Image className='image' alt='Image here' src={UserIcon} />
                         <p>2.3k</p>
-                        <Image className='image' src={Star} />
+                        <Image className='image' alt='Image here' src={Star} />
                         <p>4.5k</p>
                     </div>
                     <div className="btn"><button>Enroll</button></div>
@@ -31,7 +31,7 @@ const HeroCourse = () => {
             </div>
             <div className="course-wrapper">
             <div className="course-image">
-                <Image className='image' src={HeroCourseImage} />
+                <Image className='image' alt='Image here' src={HeroCourseImage} />
             </div>
             <div className="course-details">
                 <div className="course-det">
@@ -40,9 +40,9 @@ const HeroCourse = () => {
                 </div>
                 <div className="course-stats">
                     <div className="stats">
-                        <Image className='image' src={UserIcon} />
+                        <Image className='image' alt='Image here' src={UserIcon} />
                         <p>2.3k</p>
-                        <Image className='image' src={Star} />
+                        <Image className='image' alt='Image here' src={Star} />
                         <p>4.5k</p>
                     </div>
                     <div className="btn"><button>Enroll</button></div>
@@ -51,7 +51,7 @@ const HeroCourse = () => {
             </div>
             <div className="course-wrapper">
             <div className="course-image">
-                <Image className='image' src={HeroCourseImage} />
+                <Image className='image' alt='Image here' src={HeroCourseImage} />
             </div>
             <div className="course-details">
                 <div className="course-det">

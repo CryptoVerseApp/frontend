@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .hero {
     display: flex;
     width: 100%;
@@ -7,7 +9,11 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+    scroll-behavior: smooth;
+
+    @include mobile {
+        background-position: right;
+    }
 
     .hero-container {
         display: flex;
@@ -15,30 +21,55 @@
         justify-content: center;
         width: 85%;
 
+        @include mobile {
+            width: 95%;
+        }
+
         .hero-txt {
             text-align: center;
             color: white;
             width: 70%;
 
+            @include mobile {
+                width: 90%;
+            }
+
             h3 {
                 font-size: 58px;
                 font-weight: 600;
+
+                @include tablet {
+                    font-size: 48px;
+                    margin-top: 20px;
+                }
+
+                @include mobile {
+                    font-size: 22px;
+                }
             }
 
             p {
                 font-size: 22px;
                 margin: 20px 0px;
-                font-family: "Afacad Flux", sans-serif;
+
+                @include mobile {
+                    font-size: 14px;
+                }
             }
 
             button {
                 font-size: 18px;
                 font-weight: 600;
                 padding: 20px 60px;
-                font-family: "Afacad Flux", sans-serif;
-                background: #4c4cfc;
+                background: #7082F5;
+                border: 3px solid #4454C1;
                 border-radius: 30px;
                 margin: 20px 0px;
+
+                @include mobile {
+                    font-size: 14px;
+                    padding: 4px 10px;
+                }
             }
         }
     }

@@ -6,9 +6,9 @@ import HeroCourse from '../herocourse/HeroCourse'
 const HeroCart = () => {
   return (
 <div className='herocart'>
-<div className='flex w-full items-center justify-center p-8 font-[Poppins]'>
-      <div className="flex items-center justify-around w-full text-xl text-white">
-        <div className="flex gap-4">
+<div className='flex w-full items-center justify-center p-8'>
+      <div className="cartlist flex items-center justify-around w-full text-xl text-white">
+        <div className="cart flex gap-1">
             <Link className='text-blue-700' href='/'>All</Link>
             <Link href='/'>Web3</Link>
             <Link href='/'>DeFi</Link>

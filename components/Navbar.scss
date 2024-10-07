@@ -1,3 +1,4 @@
+@import '../style.scss';
 
 .navbar {
     display: flex;
@@ -8,6 +9,7 @@
     top: 0;
     width: 100%;
     color: white;
+     
 
     .navbar-name {
 
@@ -31,15 +33,49 @@
         .navbar-btn {
 
             button {
-                background: #4c4cfc;
+                background: #7082F5;
+                border: 3px solid #4454C1;
                 color: white;
                 padding: 20px 40px;
                 border-radius: 30px;
                 font-weight: 500;
                 transition: 0.4s;
 
+                @include tablet {
+                    font-size: 16px;
+                    padding: 15px 25px;
+                    margin-left: 20px;
+                }
+
                 &:hover {
                     background: rgb(19, 19, 122);
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .navbar {
+
+        .navbar-name {
+
+            .image {
+                width: 100px;
+            }
+        }
+
+        .navbar-left {
+
+            .navlinks {
+                display: none;
+            }
+
+            .navbar-btn {
+
+                button {
+                    font-size: 12px;
+                    padding: 2px 8px;
                 }
             }
         }
