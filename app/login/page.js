@@ -14,11 +14,11 @@ export default function SignIn () {
                     <Image className="image" src={SigninHero} alt="Image here" />
                 </div>
                 <div className="sign-right">
-                    <h2>Connect Wallet</h2>
-                    <p>Connect your wallet to our platform and start Learning</p>
+                    <h2>Login</h2>
+                    <p>Enter your password to start Learning</p>
                     <form>
-                        <input type="text" name="basename" placeholder="Base Name" />
-                        <button>Connect</button>
+                        <input type="password" name="Password" placeholder="Enter your password" />
+                        <button>Login</button>
                     </form>
                     <p className="linkin">Don&apos;t have an account? <Link href='/signup'>SignUp</Link></p>
                 </div>
