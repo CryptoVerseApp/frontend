@@ -4,6 +4,7 @@ import Image from "next/image";
 import SigninHero from '../assets/login.png';
 import Link from "next/link";
 import '../login/SignIn.scss'
+import { useWallet } from "../hooks/useWallet";
 
 export default function SignUp() {
     const { walletAddress, networkError, connectWallet } = useWallet(); // Use the custom hook
@@ -29,5 +30,6 @@ export default function SignUp() {
             </div>
         </div>
     </div>
+    </>
     )
 }
