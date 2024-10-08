@@ -35,11 +35,11 @@
             }
 
             h3 {
-                font-size: 58px;
+                font-size: 48px;
                 font-weight: 600;
 
                 @include tablet {
-                    font-size: 38px;
+                    font-size: 32px;
                     margin-top: 20px;
                 }
 
@@ -49,7 +49,7 @@
             }
 
             p {
-                font-size: 22px;
+                font-size: 16px;
                 margin: 20px 0px;
 
                 @include tablet {
@@ -62,9 +62,9 @@
             }
 
             button {
-                font-size: 18px;
-                font-weight: 600;
-                padding: 20px 60px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 15px 40px;
                 background: #7082F5;
                 border: 3px solid #4454C1;
                 border-radius: 30px;

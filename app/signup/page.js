@@ -3,13 +3,16 @@
 import Image from "next/image";
 import SigninHero from '../assets/login.png';
 import Link from "next/link";
-import '../login/SignIn.scss';
-import { useWallet } from '../hooks/useWallet'; // Import your custom hook
+import '../login/SignIn.scss'
+import { useWallet } from "../hooks/useWallet";
+import Navbar from "@/components/Navbar";
 
 export default function SignUp() {
     const {ensName } = useWallet(); // Use the custom hook
 
     return (
+        <>
+        <Navbar />
         <div className="signin">
             <div className="signin-container">
                 <div className="signin-hero">
@@ -36,7 +39,8 @@ export default function SignUp() {
                     </form>
                     <p className="linkin">Already have an account? <Link href='/login'>Login</Link></p>
                 </div>
-            </div>
         </div>
-    );
+    </div>
+    </>
+    )
 }
