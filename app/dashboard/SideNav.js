@@ -22,25 +22,25 @@ export default function SideNav() {
           </div>
           <p>Dashboard</p>
           </Link>
-          <Link className="navlinks"   href='/dashboard'>
+          <Link className="navlinks"   href='/dashboard/library'>
           <div className="aside-icon">
             <Image className="icons" src={LibraryImage} alt="Image here" />
           </div>
           <p>Library</p>
           </Link>
-          <Link  className="navlinks"  href='/dashboard/profile'>
+          <Link  className="navlinks"  href='/dashboard/courses'>
           <div className="aside-icon">
             <Image className="icons" src={AllImage} alt="Image here" />
           </div>
           <p>All Courses</p>
           </Link>
-          <Link className="navlinks"   href='/'>
+          <Link className="navlinks"   href='/dashboard/payment'>
           <div className="aside-icon">
             <Image className="icons" src={PayImage} alt="Image here" />
           </div>
           <p>Payment</p>
           </Link>
-          <Link className="navlinks"   href='/'>
+          <Link className="navlinks"   href='/dashboard/certification'>
           <div className="aside-icon">
             <Image className="icons" src={CertImage} alt="Image here" />
           </div>

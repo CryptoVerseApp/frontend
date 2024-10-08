@@ -2,13 +2,16 @@ import Image from "next/image";
 import SigninHero from '../assets/login.png'
 import Link from "next/link";
 import '../login/SignIn.scss'
+import Navbar from "@/components/Navbar";
 
 export default function SignUp () {
     return (
+        <>
+        <Navbar />
         <div className="signin">
         <div className="signin-container">
             <div className="signin-hero">
-                <Image src={SigninHero} alt="Image here" />
+                <Image className="image" src={SigninHero} alt="Image here" />
             </div>
             <div className="sign-right">
                 <h2>Sign Up</h2>
@@ -23,5 +26,6 @@ export default function SignUp () {
             </div>
         </div>
     </div>
+        </>
     )
 }

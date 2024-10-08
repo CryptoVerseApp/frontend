@@ -12,7 +12,8 @@
     min-height: 100vh;
 
     h2 {
-        font-size: 48px;
+        font-size: 38px;
+        font-weight: 500;
         margin: 80px 0px;
     }
 
@@ -24,7 +25,7 @@
         width: 90%;
         text-align: start;
         margin: 20px;
-        gap: 60px;
+        gap: 20px;
 
         @include tablet {
             gap: 15px;
@@ -41,16 +42,14 @@
             row-gap: 20px;
             background: #353E74;
             padding: 70px 30px;
-            width: 380px;
             border-radius: 30px;
-            height: 450px;
 
             @include tablet {
                 width: 340px;
             }
 
             h2 {
-                font-size: 28px;
+                font-size: 18px;
                 font-weight: 600;
                 margin: 0;
 
@@ -60,7 +59,8 @@
             }
 
             p {
-                width: 300px;
+                font-size: 14px;
+                width: 200px;
             }
         }
     }

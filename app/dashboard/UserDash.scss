@@ -1,0 +1,124 @@
+.userdash {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-left: 1px solid #b4b4b4;
+    min-width: 18%;
+    padding: 10px;
+    margin: 0px 20px;
+
+    .userdash-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .userdash-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 40px;
+
+        .user-notifier {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+            .notifier {
+                width: 20px;
+            }
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .profile-image {
+                
+                .image {
+                    width: 60px;
+                }
+            }
+
+            
+            .drop-icon {
+                position: relative;
+
+                .drop-menu {
+                    position: absolute;
+                    top: 30px;
+                    right: 0px;
+                    box-shadow: 4px 7px 6px rgba(0,0,0, 20%);
+
+                    p {
+                        cursor: pointer;
+                        padding: 10px 30px;
+
+                        &:hover {
+                            background: #b4b4b4;
+                        }
+                    }
+                }
+            }
+
+            .user-info {
+
+
+                h3 {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: 10px;
+                    color: #b4b4b4;
+                }
+            }
+
+            .icon {
+                width: 20px;
+            }
+        }
+    }
+
+    .topic {
+        padding: 30px 0px;
+        color: #b4b4b4;
+    }
+
+    .authur {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        .authur-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .authur-profile {
+                
+                .image {
+                    width: 50px;
+                }
+            }
+
+            .authur-info {
+
+                h3 {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 10px;
+                    color: #b4b4b4;
+                }
+            }
+        }
+    }
+}
