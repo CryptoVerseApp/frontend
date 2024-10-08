@@ -5,6 +5,7 @@ import SigninHero from '../assets/login.png';
 import Link from "next/link";
 import '../login/SignIn.scss'
 import { useWallet } from "../hooks/useWallet";
+import Navbar from "@/components/Navbar";
 
 export default function SignUp() {
     const { walletAddress, networkError, connectWallet } = useWallet(); // Use the custom hook
