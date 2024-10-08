@@ -1,17 +1,20 @@
+"use client";
+
 import Image from "next/image";
-import SigninHero from '../assets/login.png'
+import SigninHero from '../assets/login.png';
 import Link from "next/link";
 import '../login/SignIn.scss'
-import Navbar from "@/components/Navbar";
 
-export default function SignUp () {
+export default function SignUp() {
+    const { walletAddress, networkError, connectWallet } = useWallet(); // Use the custom hook
+
     return (
         <>
         <Navbar />
         <div className="signin">
         <div className="signin-container">
             <div className="signin-hero">
-                <Image className="image" src={SigninHero} alt="Image here" />
+                <Image src={SigninHero} alt="Image here" />
             </div>
             <div className="sign-right">
                 <h2>Sign Up</h2>
@@ -26,6 +29,5 @@ export default function SignUp () {
             </div>
         </div>
     </div>
-        </>
     )
 }
