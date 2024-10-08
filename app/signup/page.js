@@ -7,7 +7,7 @@ import '../login/SignIn.scss';
 import { useWallet } from '../hooks/useWallet'; // Import your custom hook
 
 export default function SignUp() {
-    const { walletAddress, networkError, connectWallet } = useWallet(); // Use the custom hook
+    const {ensName } = useWallet(); // Use the custom hook
 
     return (
         <div className="signin">
@@ -19,15 +19,22 @@ export default function SignUp() {
                     <h2>Sign Up</h2>
                     <p>Create an account with us on our platform and start Learning</p>
                     <form onSubmit={(e) => e.preventDefault()}>
-                        <input type="text" name="basename" placeholder="Base Name" required />
+                        <input
+                            type="text"
+                            name="basename"
+                            placeholder={ensName ? ensName : "Enter base name"}
+                            required
+                            disabled={!!ensName}
+                        />
+
                         <input type="email" name="email" placeholder="Email" required />
                         <input type="password" name="password" placeholder="Password" required />
-                        <button type="button" onClick={connectWallet}>
-                            {walletAddress ? `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 'Connect Wallet'}
+                        <button type="button" >
+                           Signup
                         </button>
-                        {networkError && <p className="error-message">{networkError}</p>}
+                        
                     </form>
-                    <p className="linkin">Already have an account? <Link href='/login'>SignUp</Link></p>
+                    <p className="linkin">Already have an account? <Link href='/login'>Login</Link></p>
                 </div>
             </div>
         </div>

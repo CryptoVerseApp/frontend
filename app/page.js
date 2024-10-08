@@ -1,4 +1,4 @@
-import HomaPage from "./homapge/page";
+import HomaPage from "./hompage/page";
 
 export default function Home() {
 
