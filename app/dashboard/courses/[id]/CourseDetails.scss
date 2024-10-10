@@ -1,0 +1,163 @@
+.coursepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .coursepage-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 95%;
+
+        .search-wrapper {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            width: 100%;
+
+            .dash-search {
+                display: flex;
+                background: #d3d2d2;
+                padding: 15px 15px;
+                border-radius: 30px;
+    
+                .search-icon {
+                    width: 40px;
+                    object-fit: contain;
+                }
+    
+                input {
+                    background: #d3d2d2;
+                    color: black;
+                    padding: 0px 35px;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            padding: 40px 0px;
+            width: 100%;
+
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .course-vid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .vid-container {
+                width: 50%;
+                border-radius: 30px;
+                padding: 10px;
+                box-shadow: 0px 8px 6px rgba(0,0,0, 16%);
+            }
+        }
+
+        .coursepage-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 50px 0px;
+
+            .coursepage-content {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                width: 100%;
+                box-shadow: 0px 4px 6px 3px rgba(0,0,0, 10%);
+                border-radius: 20px;
+                padding: 20px;
+
+                .section-det {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 10px 0px;
+
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+
+                        .left-det {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+
+                            p {
+                                font-size: 14px;
+                                color: #8F8F8F;
+                            }
+                        }
+                    }
+                }
+
+                .section-outline {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    box-shadow: 0px 0px 2px 1px rgba(0,0,0, 16%);
+                    padding: 10px 30px;
+
+                    .section-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: 10px;
+
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            h2 {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    .section-topics {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                    }
+
+                    .right {
+                        
+                        p {
+                            color: #8F8F8F;
+                        }
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

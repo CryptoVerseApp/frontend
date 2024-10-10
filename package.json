@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@ensdomains/ensjs": "^4.0.1-alpha.0",
-    "@next/font": "^14.2.14",
     "@svgr/webpack": "^8.1.0",
     "bcryptjs": "^2.4.3",
     "ethers": "^6.13.3",

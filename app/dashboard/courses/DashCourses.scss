@@ -1,0 +1,67 @@
+.dash-courses {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    width: 100%;
+
+    .dash-cors-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 6px 7px 4px rgba(0,0,0, 5%);
+
+        .dash-image {
+
+            .image {
+                width: 280px;
+            }
+        }
+
+        .dash-details {
+            text-align: start;
+            margin: 8px 0px;
+
+            p {
+                color: #cea205;
+            }
+
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .dash-mojis {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 50px;
+
+            .dash-left {
+                display: flex;
+                gap: 10px;
+
+                .moji {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .right {
+
+                button {
+                    padding: 6px 15px;
+                    background: #1A2850;
+                    color: white;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

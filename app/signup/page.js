@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import SigninHero from '../assets/login.png';
 import Link from "next/link";
@@ -8,7 +6,7 @@ import { useWallet } from "../hooks/useWallet";
 import Navbar from "@/components/Navbar";
 
 export default function SignUp() {
-    const {ensName } = useWallet(); // Use the custom hook
+    const {ensName } = useWallet();
 
     return (
         <>
