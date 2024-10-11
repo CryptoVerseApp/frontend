@@ -12,7 +12,6 @@ import VidUp from '../../../assets/vidup.png';
 import VidDl from '../../../assets/viddl.png';
 import { useState } from 'react';
 
-// Sample course data with multiple lessons
 const courses = [
   {
     id: 1,
@@ -62,27 +61,20 @@ export default function CourseDetails({ params }) {
   return (
     <div className='coursepage'>
       <div className="coursepage-container">
-        {/* Search Section */}
         <div className="search-wrapper">
           <div className="dash-search">
             <Image className='search-icon' src={SearchBar} alt='Search Icon' />
             <input type="text" placeholder='Search library for course' />
           </div>
         </div>
-
-        {/* Course Title */}
         <div className="title">
           <h2>{course.title}</h2>
         </div>
-
-        {/* Video Player Section */}
         <div className="course-vid">
           <div className="vid-container">
             <VideoPlayer videoUrl={selectedVideo} />
           </div>
         </div>
-
-        {/* Course Details */}
         <div className="coursepage-details">
           <div className="coursepage-content">
             <h2>Course Content</h2>

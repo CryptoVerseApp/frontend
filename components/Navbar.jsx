@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useWallet } from '../app/hooks/useWallet'; // Import your custom hook
 import { useRouter } from 'next/navigation'; // Use router for programmatic navigation
 
-const Navbar = () => {
+const Navbar = ({setMenu}) => {
   //Import wallet connect hooks
   const { walletAddress, networkError, ensName, connectWallet } = useWallet(); // Use the custom hook
   // Initialize router
@@ -16,7 +16,7 @@ const Navbar = () => {
   // Automatically navigate to /signup if walletAddress is not null
   useEffect(() => {
     if (walletAddress) {
-      router.push('/signup');
+      setMenu(true)
     }
   }, [walletAddress, router]); // Watches for changes to walletAddress
 
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar-name"><Image className='image' src={Logo} alt='Logo' /></div>
       <div className="navbar-left">
         <div className="navlinks">
-          <Link href='#' className='text-blue-700'>Home</Link>
+          <Link href='/' className='text-blue-700'>Home</Link>
           <Link href='#courses'>Course</Link>
           <Link href='#library'>Library</Link>
           <Link href='/'>Wallet</Link>

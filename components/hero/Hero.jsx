@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.scss'
 
-const Hero = () => {
+const Hero = ({setMenu}) => {
   return (
     <div className='hero'>
         <div className="hero-container">
@@ -10,7 +10,7 @@ const Hero = () => {
                 <p>Curious about Web3 and the world of cryptocurrency? Crytoverse has everything you need to stay ahead in the decentralized revolution. 
             Explore curated, blockchain-secured courses that covers everything from the basics of crytocurrencies to advanced decentralized finance strategies. 
             </p>
-            <button>Get Started</button>
+            <button onClick={()=>setMenu(true)}>Get Started</button>
             </div>
         </div>
     </div>
