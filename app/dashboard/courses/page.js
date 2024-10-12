@@ -1,4 +1,3 @@
-// pages/courses/index.js
 import Link from 'next/link';
 
 const courses = [

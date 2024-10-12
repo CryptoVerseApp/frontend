@@ -14,7 +14,7 @@ LoadDB();
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, email, password, walletAddress } = body;
+        const { basename, email, password } = body;
 
         const existUser = await User.findOne({ email });
         if (existUser) {
@@ -24,16 +24,15 @@ export async function POST(req) {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new User({
-            name,
+            basename,
             email,
             password: hashedPassword,
-            walletAddress,
         });
 
         await newUser.save();
 
         const token = jwt.sign({ id: newUser._id }, JWT_SECRET, { expiresIn: '1h' });
-        return new Response(JSON.stringify({ token, walletAddress: newUser.walletAddress }), {
+        return new Response(JSON.stringify({ token }), {
             status: 201,
         });
     } catch (error) {
