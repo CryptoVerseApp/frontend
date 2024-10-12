@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .dashboard {
     display: flex;
     flex-direction: column;
@@ -12,27 +14,48 @@
         justify-content: start;
         width: 95%;
 
+        @include mobile {
+            justify-content: center;
+            width: 100%;
+        }
+
         .search-wrapper {
             display: flex;
             align-items: start;
             justify-content: start;
             width: 100%;
 
+            @include mobile {
+                width: 50% !important;
+            }
+
             .dash-search {
                 display: flex;
                 background: #d3d2d2;
                 padding: 15px 15px;
                 border-radius: 30px;
+
+                @include mobile {
+                    padding: 5px !important;
+                }
     
                 .search-icon {
                     width: 40px;
                     object-fit: contain;
+
+                    @include mobile {
+                        width: 15px !important;
+                    }
                 }
     
                 input {
                     background: #d3d2d2;
                     color: black;
                     padding: 0px 35px;
+
+                    @include mobile {
+                        width: 100% !important;
+                    }
     
                     &:focus {
                         outline: none;
@@ -70,13 +93,18 @@
 
                 .image {
                     width: 280px;
+
+                    @include tablet {
+                        padding-top: 20px;
+                        width: 250px;
+                    }
                 }
             }
 
             .preview-title {
                 position: absolute;
                 top: 0;
-                padding: 10px;
+                padding: 20px 10px;
                 color: white;
                 display: flex;
                 flex-direction: column;

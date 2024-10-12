@@ -16,7 +16,7 @@ export default function DashboardPage() {
         </div>
         </div>
         <div className="dash-rec">
-          <div className="rec">
+          <div className="rec md:bg-red-600">
           <p>Recommended Courses</p>
           </div>
           <div className="rec">

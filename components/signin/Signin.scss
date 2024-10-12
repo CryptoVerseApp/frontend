@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 .signin {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,7 @@
     width: 100%;
     height: 100vh;
     color: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1;
     background: #353e749c;
@@ -21,6 +23,10 @@
         border-radius: 30px;
         animation: menuAnim 0.6s;
 
+        @include mobile {
+            width: 90%;
+        }
+
         .siginin-wrapper {
             display: flex;
             flex-direction: column;
@@ -28,15 +34,32 @@
             justify-content: center;
             width: 65%;
 
+            @include mobile {
+                width: 80%;
+            }
+
             .sign-logo {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 20px 0px;
 
+                @include mobile {
+                    width: 100px;
+                }
+
                 h2 {
                     text-align: center;
                     font-size: 24px;
+                }
+
+                p {
+
+                    @include mobile {
+                        text-align: start;
+                        font-size: 12px;
+                        width: 300px !important;
+                    }
                 }
             }
 
@@ -53,6 +76,11 @@
                     padding: 15px 10px;
                     width: 100%;
                     color: black;
+
+                    @include mobile {
+                        padding: 10px 10px;
+                        font-size: 14px;
+                    }
 
                     &:focus {
                         outline: none;

@@ -1,0 +1,39 @@
+@import '../../style.scss';
+
+.mobilenav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background: #1A2850;
+    color: white;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 30px;
+    margin-top: -10px;
+
+    @include mobile {
+        display: flex;
+    }
+
+    .mobilenav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 30px;
+
+        .right {
+            display: flex;
+
+            .user-col {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .image {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

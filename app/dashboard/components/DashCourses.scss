@@ -1,3 +1,5 @@
+@import '../../../style.scss';
+
 .dash-courses {
     display: flex;
     flex-wrap: wrap;
@@ -6,19 +8,39 @@
     gap: 30px;
     width: 100%;
 
+    @include mobile {
+        justify-content: center !important; 
+    }
+
+    @include tablet {
+        gap: 10px;
+    }
+
     .dash-cors-container {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        padding: 20px;
+        padding: 10px;
         border-radius: 20px;
         box-shadow: 0px 6px 7px 4px rgba(0,0,0, 5%);
+
+        @include tablet {
+            padding: 10px;
+        }
 
         .dash-image {
 
             .image {
                 width: 280px;
+
+                @include mobile {
+                    width: 300px !important;
+                }
+
+                @include tablet {
+                    width: 235px;
+                }
             }
         }
 
@@ -33,6 +55,11 @@
             h2 {
                 font-size: 18px;
                 font-weight: 600;
+
+                @include tablet {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
             }
         }
 

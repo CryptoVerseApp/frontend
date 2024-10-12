@@ -67,11 +67,12 @@
                     flex-direction: column;
 
                     h2 {
-                        font-size: 28px;
+                        font-size: 20px;
                         width: 600px;
 
                         @include tablet {
-                            width: 500px;
+                            font-size: 20;
+                            width: 400px;
                         }
 
                         @include mobile {
@@ -91,10 +92,18 @@
                     padding: 6px;
                     border-radius: 50%;
 
+                    @include tablet {
+                        padding: 0;
+                    }
+
                     .image {
                         width: 25px;
                         height: 25px;
                         object-fit: contain;
+
+                        @include tablet {
+                            object-fit: contain;
+                        }
 
                         @include mobile {
                             width: 20px;
