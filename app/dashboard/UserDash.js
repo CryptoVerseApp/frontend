@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import Notifier from '../assets/notify.png'
 import ProfileImage from '../assets/user.png'
@@ -7,8 +8,12 @@ import UserTwo from '../assets/user2.png'
 import UserThree from '../assets/user3.png'
 import Image from 'next/image'
 import './UserDash.scss'
+import { useState } from 'react'
 
 export default function UserDash () {
+
+    const [out, setOut] = useState(false)
+
     return (
         <div className="userdash">
             <div className="userdash-wrapper">
@@ -25,16 +30,16 @@ export default function UserDash () {
                        <div><p>alikamatu.eth</p></div>
                     </div>
                    <div className="drop-icon">
-                   <Image className='icon' src={DropIcon} alt='Image here' />
-                   <div className="drop-menu">
+                   <Image onClick={()=>setOut(true)} className='icon' src={DropIcon} alt='Image here' />
+                  {out? <div className="drop-menu">
                     <p>Logout</p>
-                   </div>
+                   </div>:""}
                    </div>
                 </div>
             </div>
             </div>
-            <div className="topic"><p>Top Authors</p></div>
-            <div className="authur">
+            <div onClick={()=>setOut(false)} className="topic"><p>Top Authors</p></div>
+            <div onClick={()=>setOut(false)} className="authur">
                 <div className="authur-wrapper">
                     <div className="authur-profile">
                         <Image className='image' src={UserOne} alt='Image here' />
@@ -46,19 +51,19 @@ export default function UserDash () {
                 </div>
                 <div className="authur-wrapper">
                     <div className="authur-profile">
-                        <Image className='image' src={UserOne} alt='Image here' />
+                        <Image className='image' src={UserTwo} alt='Image here' />
                     </div>
                     <div className="authur-info">
-                        <div><h3>Nille Woods</h3></div>
+                        <div><h3>Micheal Curry</h3></div>
                         <div><p>Authur</p></div>
                     </div>
                 </div>
                 <div className="authur-wrapper">
                     <div className="authur-profile">
-                        <Image className='image' src={UserOne} alt='Image here' />
+                        <Image className='image' src={UserThree} alt='Image here' />
                     </div>
                     <div className="authur-info">
-                        <div><h3>Nille Woods</h3></div>
+                        <div><h3>Bryan Adams</h3></div>
                         <div><p>Authur</p></div>
                     </div>
                 </div>

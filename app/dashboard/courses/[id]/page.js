@@ -1,7 +1,5 @@
 "use client";
 import Image from 'next/image';
-import CourseImage from '../../../assets/course.png';
-import Link from 'next/link';
 import VideoPlayer from '../../components/VideoPlayer';
 import './CourseDetails.scss';
 import SearchBar from '../../../assets/search.png';
@@ -16,35 +14,95 @@ const courses = [
   {
     id: 1,
     category: 'Blockchain',
-    title: 'Introduction to Blockchain',
-    description: "A very good course to study to start a career in blockchain",
-    users: '2.6k',
-    rating: '4.3k',
+    title: 'Introduction to Blockchain & Web3',
+    description: "This course provides a deep dive into blockchain technology and its role in the decentralized web (Web3). You'll learn the fundamentals of blockchain, including how transactions are validated, and explore key concepts such as consensus mechanisms, decentralization, and the role of Web3 in reshaping the internet.",
+    users: '3.2k',
+    rating: '4.8k',
     sections: [
       {
-        title: 'Introduction to Blockchain',
+        title: 'Blockchain Fundamentals',
         lessons: [
-          { title: 'What is Blockchain?', duration: '4 mins', videoUrl: '/videos/blockchain_intro.mp4' },
-          { title: 'Blockchain History', duration: '5 mins', videoUrl: '/videos/blockchain_history.mp4' },
+          { title: 'Blockchain Explained', duration: '6 mins', videoUrl: 'https://youtu.be/yubzJw0uiE4' },
+          { title: 'Decentralization & Consensus', duration: '8 mins', videoUrl: '/videos/consensus_mechanisms.mp4' },
+          { title: 'Types of Blockchains', duration: '7 mins', videoUrl: '/videos/types_of_blockchains.mp4' },
+          { title: 'How Blockchain Works', duration: '10 mins', videoUrl: '/videos/how_blockchain_works.mp4' },
         ],
       },
       {
-        title: 'Blockchain Use Cases',
+        title: 'Blockchain in Practice',
         lessons: [
-          { title: 'Cryptocurrency', duration: '6 mins', videoUrl: '/videos/cryptocurrency.mp4' },
-          { title: 'Smart Contracts', duration: '8 mins', videoUrl: '/videos/smart_contracts.mp4' },
+          { title: 'Use Cases in Finance', duration: '7 mins', videoUrl: '/videos/blockchain_finance.mp4' },
+          { title: 'Beyond Cryptocurrencies', duration: '5 mins', videoUrl: '/videos/blockchain_beyond_crypto.mp4' },
+          { title: 'Blockchain in Supply Chain', duration: '9 mins', videoUrl: '/videos/blockchain_supply_chain.mp4' },
+          { title: 'Future Trends in Blockchain', duration: '6 mins', videoUrl: '/videos/future_trends_blockchain.mp4' },
         ],
       },
     ],
   },
-  // Additional courses can be added here
+  {
+    id: 2,
+    category: 'Smart Contracts',
+    title: 'Smart Contracts Development with Solidity',
+    description: "This course teaches you how to develop and deploy smart contracts using Solidity, the leading programming language for Ethereum. Learn the syntax of Solidity, smart contract security, and how to build, test, and deploy your contracts to the Ethereum network.",
+    users: '2.9k',
+    rating: '4.6k',
+    sections: [
+      {
+        title: 'Solidity Basics',
+        lessons: [
+          { title: 'Getting Started with Solidity', duration: '7 mins', videoUrl: '/videos/solidity_basics.mp4' },
+          { title: 'Functions & Variables', duration: '6 mins', videoUrl: '/videos/solidity_functions.mp4' },
+          { title: 'Data Types in Solidity', duration: '8 mins', videoUrl: '/videos/data_types_solidity.mp4' },
+          { title: 'Control Structures', duration: '7 mins', videoUrl: '/videos/control_structures.mp4' },
+        ],
+      },
+      {
+        title: 'Deploying Smart Contracts',
+        lessons: [
+          { title: 'Deploying to Ethereum', duration: '8 mins', videoUrl: '/videos/deploying_smart_contracts.mp4' },
+          { title: 'Contract Testing & Security', duration: '9 mins', videoUrl: '/videos/testing_security.mp4' },
+          { title: 'Interacting with Contracts', duration: '7 mins', videoUrl: '/videos/interacting_with_contracts.mp4' },
+          { title: 'Advanced Solidity Concepts', duration: '10 mins', videoUrl: '/videos/advanced_solidity.mp4' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    category: 'Decentralized Apps (dApps)',
+    title: 'Building dApps with React & Web3.js',
+    description: "Learn how to build decentralized applications (dApps) using React and Web3.js. This course covers the fundamentals of dApp development, integrating smart contracts, and interacting with Ethereum via Web3.js. By the end, you'll be able to create a functional dApp and deploy it on a blockchain.",
+    users: '3.5k',
+    rating: '4.9k',
+    sections: [
+      {
+        title: 'dApp Architecture',
+        lessons: [
+          { title: 'Introduction to dApps', duration: '6 mins', videoUrl: '/videos/dapp_intro.mp4' },
+          { title: 'Frontend-Backend Interaction', duration: '7 mins', videoUrl: '/videos/frontend_backend.mp4' },
+          { title: 'User Interface Design for dApps', duration: '8 mins', videoUrl: '/videos/ui_design_dapps.mp4' },
+          { title: 'State Management in React', duration: '9 mins', videoUrl: '/videos/state_management_react.mp4' },
+        ],
+      },
+      {
+        title: 'Integrating Smart Contracts',
+        lessons: [
+          { title: 'Web3.js & Ethereum', duration: '8 mins', videoUrl: '/videos/web3js_ethereum.mp4' },
+          { title: 'Deploying dApps', duration: '9 mins', videoUrl: '/videos/deploying_dapps.mp4' },
+          { title: 'Using Metamask with dApps', duration: '6 mins', videoUrl: '/videos/metamask_dapps.mp4' },
+          { title: 'Testing & Debugging dApps', duration: '10 mins', videoUrl: '/videos/testing_debugging_dapps.mp4' },
+        ],
+      },
+    ],
+  },
 ];
+
 
 export default function CourseDetails({ params }) {
   const { id } = params;
   const course = courses.find((c) => c.id === parseInt(id));
   const [selectedVideo, setSelectedVideo] = useState(course?.sections[0]?.lessons[0]?.videoUrl || '');
-  const [expanded, setExpanded] = useState(false); // Expand/Collapse state
+  const [expanded, setExpanded] = useState(true);
 
   if (!course) {
     return <p>Course not found!</p>;
@@ -90,7 +148,7 @@ export default function CourseDetails({ params }) {
                 </div>
                 <div className="left-det">
                   <Image src={VidPlay} alt='Duration' />
-                  <p>2h: 10mins</p>
+                  <p>Approx. 3h: 45mins</p>
                 </div>
               </div>
               <div className="right">
@@ -108,35 +166,21 @@ export default function CourseDetails({ params }) {
                   </div>
                 </div>
                 {/* Conditionally show lessons if expanded */}
+                {expanded && (
                   <div className="section-topics">
                     {section.lessons.map((lesson, lessonIndex) => (
-                      <div className="lesson" key={lessonIndex}>
-                        <div className="left" onClick={() => handleVideoChange(lesson.videoUrl)}>
-                          <Image src={VidPlay} alt='Lesson Icon' />
-                          <p>{lesson.title}</p>
+                      <div className="lesson" key={lessonIndex} onClick={() => handleVideoChange(lesson.videoUrl)}>
+                        <div className="left">
+                        <Image src={VidPlay} alt='Lesson Icon' />
+                        <h3>{lesson.title}</h3>
                         </div>
-                        <div className="right">
-                          <p>{lesson.duration}</p>
-                        </div>
+                        <span>{lesson.duration}</span>
                       </div>
                     ))}
                   </div>
+                )}
               </div>
             ))}
-          </div>
-
-          {/* Download Section */}
-          <div className="coursepage-download">
-            <div className="download-option">
-              <Image src={VidDl} alt='Download Icon' />
-              <p>Download Course Materials</p>
-            </div>
-          </div>
-
-          {/* Course Progress */}
-          <div className="coursepage-progress">
-            <p>Track Progress: <span>50% Completed</span></p>
-            {/* You can add progress tracking logic here */}
           </div>
         </div>
       </div>

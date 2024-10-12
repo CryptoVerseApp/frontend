@@ -61,7 +61,7 @@
             width: 100%;
 
             .vid-container {
-                width: 50%;
+                width: 100%;
                 border-radius: 30px;
                 padding: 10px;
                 box-shadow: 0px 8px 6px rgba(0,0,0, 16%);
@@ -139,9 +139,19 @@
 
                     .section-topics {
                         display: flex;
+                        flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
                         width: 100%;
+                        row-gap: 7px;
+
+                        .lesson {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            cursor: pointer;
+                        }
 
                         .left {
                             display: flex;
