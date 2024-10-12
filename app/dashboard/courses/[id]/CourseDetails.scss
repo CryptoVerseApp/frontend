@@ -1,3 +1,5 @@
+@import '../../../../style.scss';
+
 .coursepage {
     display: flex;
     flex-direction: column;
@@ -86,6 +88,11 @@
                 border-radius: 20px;
                 padding: 20px;
 
+                @include mobile {
+                    box-shadow: none;
+                    padding: 0;
+                }
+
                 .section-det {
                     display: flex;
                     align-items: center;
@@ -107,6 +114,20 @@
                             p {
                                 font-size: 14px;
                                 color: #8F8F8F;
+
+                                @include mobile {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .right {
+
+                        p {
+                            cursor: pointer;
+
+                            @include mobile {
+                                font-size: 12px;
                             }
                         }
                     }
@@ -151,20 +172,35 @@
                             justify-content: space-between;
                             width: 100%;
                             cursor: pointer;
-                        }
 
-                        .left {
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-                    }
+                            .left {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
 
-                    .right {
-                        
-                        p {
-                            color: #8F8F8F;
+                                h3 {
+
+                                    @include mobile {
+                                        font-size: 12px;
+                                        color: #424242;
+                                    }
+                                }
                         }
-                    }
+                        span {
+
+                            @include mobile {
+                                font-size: 12px;
+                                color: #424242;
+                            }
+                        }
+    
+                        .right {
+                            
+                            p {
+                                color: #8F8F8F;
+                            }
+                        }
+                        }
                     }
                 }
             }
